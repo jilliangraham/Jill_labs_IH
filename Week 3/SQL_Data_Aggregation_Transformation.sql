@@ -45,7 +45,7 @@ LIMIT 20;
 SELECT title, rental_duration, 
     CASE
         WHEN rental_duration IS NULL THEN 'Not Available'
-        ELSE 'Available'
+        ELSE rental_duration 
     END AS availability
 FROM film
 ORDER BY title;
